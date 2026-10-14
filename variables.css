@@ -1,0 +1,20 @@
+/* Design tokens. Change colours and fonts here. */
+:root {
+  --bg: #0b1020;
+  --bg-raised: #121830;
+  --surface: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #e8ebf5;
+  --muted: #a0a9c2;
+  --teal: #2de2c4;
+  --violet: #8b5cf6;
+  --danger: #ff6b81;
+
+  --font-head: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-note: 'Caveat', cursive;
+
+  --radius: 18px;
+  --radius-sm: 10px;
+  --max: 1080px;
+}

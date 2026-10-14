@@ -1,0 +1,39 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; margin: 0 0 0.6em; letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
+h3 { font-size: 1.2rem; }
+p { margin: 0 0 1em; max-width: 68ch; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+img { max-width: 100%; display: block; }
+a { color: var(--teal); text-underline-offset: 3px; }
+a:hover { color: #fff; }
+
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 4px; }
+
+.muted { color: var(--muted); }
+.note { font-family: var(--font-note); font-size: 1.25rem; color: var(--violet); margin-right: 0.5rem; }
+.placeholder { color: #ffd479; border-bottom: 1px dashed #ffd479; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 8px; background: var(--teal); color: #04110e;
+  padding: 8px 14px; border-radius: 8px; z-index: 100; font-weight: 600;
+}
+.skip-link:focus { left: 8px; }
+
+/* Respect reduced motion everywhere */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
